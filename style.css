@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Google Sans", sans-serif;
+}
+
+section {
+    width: 100%;
+    padding: 8rem 2rem;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section:last-of-type {
+    margin-bottom: 0;
+}
+
+.top-container,
+.skills-section {
+    background-color: whitesmoke;
+}
+
+.Get-in-touch-section,
+.skills-section {
+    justify-content: flex-start;
+    padding-top: 2rem;
+}
+
+#title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#title-description {
+    margin: 1rem auto 0;
+    text-align: center;
+    max-width: 40ch;
+}
+
+#title-description,
+#title,
+.middle-container,.about-me-section,.grid-container,section,.top-container{
+    animation: Fadein 1.5s ease-in;
+}
+
+.image-profile {
+    display: inline;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.about-me-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-direction: column;
+    max-width: 35rem;
+}
+
+p {
+    word-spacing: 1px;
+    line-height: 2rem;
+}
+
+h2 {
+    font-size: 2.6rem;
+    margin: 1.5rem 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin-bottom: 50px;
+    align-items: center; /* vertically center image and text */
+}
+
+.grid-container img{
+    width: 15rem;
+    height: 10rem;
+    display: block;
+    margin: 0 auto; /* centers in flex/mobile layout */
+    justify-self: center; /* centers inside grid cell */
+    
+}
+
+.grid-paragraphs {
+    margin-bottom: 20px;
+}
+
+.last-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.spacing-last-container {
+    margin: 1.5rem 0;
+}
+
+.last-container > p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.button 
+{
+    display:flex;
+    text-decoration: none;
+    background-color: rgb(190, 190, 190);
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding:10px 20px;
+    cursor: pointer;
+    font-size:20px;
+    color:white;
+    text-transform: uppercase;
+}
+
+@keyframes Fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 800px) {
+    #title,
+    #title-description,
+    .about-me-section,
+    .image-profile {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    section {
+        padding: 5rem 1.25rem;
+    }
+
+    .grid-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+}
